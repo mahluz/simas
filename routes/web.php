@@ -25,7 +25,10 @@ Route::group(['prefix'=>'admin'],function(){
 
 	Route::get('mitra','MitraController@index');
 	Route::group(['prefix'=>'mitra'],function(){
-		
+		Route::post('store','MitraController@store');
+		Route::post('delete','MitraController@delete');
+		Route::post('update','MitraController@update');
+		Route::post('getValue','MitraController@getValue');
 	});
 
 	Route::get('statistik','StatistikController@index');
